@@ -18,16 +18,19 @@ def login_Fix(driver):
 
 class Test_log(BaseTest):
 
+    @pytest.mark.negative
     def test_emptyLogin(self, base_fix, login_Fix):
         login_Fix.click_signIn()
         assert base_fix.elementExist(locators.emailAddressRequired)
 
+    @pytest.mark.negative
     def test_invalidLogin(self, base_fix, login_Fix):
         login_Fix.enter_invalidEmail()
         login_Fix.enter_invalidpwd()
         login_Fix.click_signIn()
         assert base_fix.elementExist(locators.invalidEmailMessage)
 
+    @pytest.mark.positive
     def test_validLogin(self, base_fix, login_Fix):
         login_Fix.enter_validEmail()
         login_Fix.enter_validpwd()

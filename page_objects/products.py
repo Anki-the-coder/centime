@@ -10,7 +10,6 @@ class Products(BasePage):
         self.driver = driver
         super().__init__(self.driver)
 
-    # move below 3 codes to login
     def click_AddToCart(self, dress):
         self.do_click(dress)
 

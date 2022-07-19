@@ -23,6 +23,7 @@ def products_Fix(driver):
 
 class Test_products(BaseTest):
 
+    @pytest.mark.positive
     def test_addDeleteItemToCart(self, base_fix, login_Fix, products_Fix):
         login_Fix.login()
         products_Fix.click_product(products_locators.blouse)

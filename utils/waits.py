@@ -21,8 +21,3 @@ def abc(selenium, by_locator, time_to_wait=10):
     return WebDriverWait(selenium, time_to_wait).until(
         EC.frame_to_be_available_and_switch_to_it(by_locator)
     )
-
-
-
-
-

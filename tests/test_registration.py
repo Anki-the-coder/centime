@@ -30,6 +30,7 @@ class Test_registration(BaseTest):
         registration_Fix.click_CreateAnAccountBtn()
         assert base_fix.elementExist(locators.invalidEmailMessage)
 
+    @pytest.mark.positive
     def test_Registration(self, registration_Fix, base_fix):
         email = random_data.random_alphaNumeric() + '@gmail.com'
         registration_Fix.enter_validEmail(email)
