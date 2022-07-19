@@ -1,0 +1,6 @@
+baseURL = "http://automationpractice.com/index.php"
+invalidEmail = "test"
+invalidpwd = "test"
+errorMessage = "Invalid email address."
+validemail = "abc@gmail.com1"
+validpwd = "test@123"
